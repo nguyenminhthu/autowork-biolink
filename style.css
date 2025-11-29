@@ -1,0 +1,104 @@
+/* 1. Thiết lập biến màu để dễ sửa sau này */
+:root {
+    --bg-color: #050505;       /* Nền đen sâu */
+    --neon-cyan: #00f3ff;      /* Màu Neon chủ đạo (Xanh Cyan) */
+    --neon-pink: #bc13fe;      /* Màu Neon phụ (Hồng tím) */
+    --text-color: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace; /* Font kiểu code/máy tính */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    /* Hiệu ứng lưới (Grid) mờ mờ ở nền cho chuẩn Tech */
+    background-image: 
+        linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 380px;
+    padding: 40px 20px;
+    /* Hiệu ứng kính tối màu (Glassmorphism dark) */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 243, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.05);
+}
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Viền phát sáng quanh avatar */
+    border: 3px solid var(--neon-cyan);
+    box-shadow: 0 0 15px var(--neon-cyan), inset 0 0 10px var(--neon-cyan);
+    margin-bottom: 15px;
+    animation: float 6s ease-in-out infinite; /* Ảnh trôi nhẹ */
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* Chữ phát sáng */
+    text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+p {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+/* --- BUTTON NEON --- */
+.link-item {
+    display: block;
+    position: relative;
+    padding: 15px 20px;
+    margin: 15px 0;
+    text-decoration: none;
+    color: var(--neon-cyan);
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: transparent;
+    border: 2px solid var(--neon-cyan);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    
+    /* Hiệu ứng bóng đổ nhiều lớp tạo cảm giác Neon */
+    box-shadow: 
+        0 0 5px var(--neon-cyan),
+        inset 0 0 5px var(--neon-cyan);
+}
+
+/* Hiệu ứng khi di chuột vào (Hover) */
+.link-item:hover {
+    background: var(--neon-cyan);
+    color: #000; /* Chữ chuyển đen cho dễ đọc */
+    /* Tăng độ sáng cực mạnh khi hover */
+    box-shadow: 
+        0 0 10px var(--neon-cyan),
+        0 0 40px var(--neon-cyan),
+        0 0 80px var(--neon-cyan);
+}
+
+/* Animation làm ảnh Avatar trôi nhẹ cho sinh động */
+@keyframes float {
+    0% { transform: translatey(0px); }
+    50% { transform: translatey(-10px); }
+    100% { transform: translatey(0px); }
+}
