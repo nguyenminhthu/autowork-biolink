@@ -76,18 +76,18 @@ p.bio {
 .links {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 8px;
 }
 
 .link-item {
     display: flex;
     align-items: center;
     justify-content: center; /* Canh giữa nội dung */
-    padding: 15px;
+    padding: 8px;
     background: rgba(255, 255, 255, 0.2);
     color: white;
     text-decoration: none;
-    border-radius: 50px; /* Bo tròn nút */
+    border-radius: 8px; /* Bo tròn nút */
     border: 1px solid rgba(255, 255, 255, 0.2);
     font-weight: 500;
     transition: all 0.3s ease;
