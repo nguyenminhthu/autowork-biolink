@@ -1,29 +1,114 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-
     <title>AutoWork | Kho tài nguyên AI & Automation</title>
-<meta name="description" content="Tổng hợp công cụ AI, Prompt Excel và giải pháp tự động hóa giúp dân văn phòng X3 hiệu suất. Admin là Software Engineer.">
+    <meta name="description" content="Tổng hợp công cụ AI, Prompt Excel và giải pháp tự động hóa giúp dân văn phòng X3 hiệu suất. Admin là Software Engineer.">
 
-<meta property="og:type" content="website">
-<!-- <meta property="og:url" content="https://autowork.vn/"> -->
-<meta property="og:title" content="AutoWork - Quà tặng & Tài liệu AI Miễn phí">
-<meta property="og:description" content="Bấm vào đây để tải bộ Prompt Excel và các Tool AI tuyển chọn.">
-<meta property="og:image" content="[LINK ẢNH BÌA ĐẸP CỦA ĐỆ TỬ]">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AutoWork - Quà tặng & Tài liệu AI Miễn phí">
+    <meta property="og:description" content="Bấm vào đây để tải bộ Prompt Excel và các Tool AI tuyển chọn.">
+    <meta property="og:image" content="[LINK ẢNH BÌA ĐẸP CỦA ĐỆ TỬ]">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bio Link Của Tôi</title>
+    
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        
+        /* --- CSS SƯ PHỤ THÊM MỚI --- */
 
+        /* 1. Trang trí hàng Icon Mạng Xã Hội */
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 15px 0; /* Khoảng cách trên dưới */
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 24px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            color: #333;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Màu sắc thương hiệu */
+        .social-btn.fb { color: #1877F2; }
+        .social-btn.ins { color: #E4405F; }
+        .social-btn.mes { color: #00B2FF; }
+
+        /* 2. Tiêu đề phân cách các mục (Khóa học / Công cụ) */
+        /* CSS cho tiêu đề phân cách các mục - BẢN NÂNG CẤP CHO NỀN TỐI */
+        .section-title {
+            color: #ffffff; /* Đổi sang màu trắng cho nổi trên nền tím */
+            font-size: 1.0rem; /* Tăng kích cỡ lên chút cho rõ */
+            font-weight: 700; /* Đậm hơn chút nữa */
+            margin: 24px 0 15px 0;
+            text-align: left;
+            padding-left: 15px; /* Cách xa cái gạch đầu dòng ra chút cho thoáng */
+            
+            /* Cái gạch dọc đổi màu sáng (Cyan) cho ra chất công nghệ AI */
+            border-left: 5px solid #00efff; 
+            
+            text-transform: uppercase;
+            letter-spacing: 1.5px; /* Giãn chữ ra cho sang */
+            
+            /* Đổ bóng chữ để không bị lóa và nổi khối 3D nhẹ */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 3. Căn chỉnh Icon trong danh sách link cho thẳng hàng */
+        .link-item i {
+            margin-right: 15px;
+            font-size: 1.3rem;
+            width: 25px; /* Cố định chiều rộng icon để chữ thẳng hàng */
+            text-align: center;
+        }
+
+        /* --- HIỆU ỨNG ANIMATION (SƯ PHỤ TẶNG) --- */
+        
+        /* 1. Định nghĩa chuyển động: Từ dưới mờ ảo bay lên */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0; /* Bắt đầu: Trong suốt */
+                transform: translateY(30px); /* Bắt đầu: Nằm thấp hơn 30px */
+            }
+            to {
+                opacity: 1; /* Kết thúc: Hiện rõ 100% */
+                transform: translateY(0); /* Kết thúc: Về đúng vị trí */
+            }
+        }
+
+        /* 2. Áp dụng vào khung chứa nội dung */
+        .container {
+            /* Gọi tên animation vừa tạo ở trên */
+            animation: fadeInUp 0.8s ease-out forwards; 
+            
+            /* Giải thích:
+               - 0.8s: Thời gian chạy hiệu ứng (nhanh hay chậm sửa ở đây)
+               - ease-out: Lúc đầu nhanh, về cuối chậm lại cho mượt
+            */
+        }
     </style>
 </head>
-<!-- Google tag (gtag.js) -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FM3Q5Z7PSK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -32,54 +117,68 @@
 
   gtag('config', 'G-FM3Q5Z7PSK');
 </script>
+
 <body>
 
     <div class="container">
         <img src="images/Thu Avatar.png" alt="Avatar" class="profile-img">
         
         <h1>AutoWork</h1>
-        <p class="bio">Giúp dân văn phòng & doanh nghiệp X3 Hiệu Suất làm việc bằng AI.🚀</p>
-        <p class="bio">👇 Tải Kho Tài Liệu & Tool Miễn Phí tại đây</p>
+        <p class="bio">Giúp dân Văn phòng & Doanh nghiệp X3 hiệu Suất làm việc bằng AI.🚀</p>
+        
+        <div class="social-row">
+            <a href="https://www.facebook.com/autowork.vn/" class="social-btn fb" target="_blank" title="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            
+            <a href="https://www.instagram.com/thunguyen80021" class="social-btn ins" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://m.me/autowork.vn" class="social-btn mes" target="_blank" title="Nhắn tin Messenger">
+                <i class="fab fa-facebook-messenger"></i>
+            </a>
+        </div>
+
+        <p class="bio" style="margin-bottom: 20px;">👇 Tải Kho Tài Liệu & Tool Miễn Phí tại đây</p>
 
         <div class="links">
+            
             <a href="https://autoworkvn.com/tailieuexcel" class="link-item" target="_blank">
-                <i class="fa fa-gift"></i>Tải Bộ Prompt Excel Thần Thánh (PDF)
+                <i class="fa-solid fa-file-excel" style="color: #2ecc71;"></i> Tải Bộ Prompt Excel Thần Thánh (PDF)
             </a>
 
-            <a href="https://www.facebook.com/autowork.vn/" class="link-item" target="_blank">
-                <i class="fab fa-facebook"></i> Facebook
+            <!-- <div class="section-title">🎓 Khóa Học Thực Chiến</div>
+            
+            <a href="#" class="link-item" target="_blank">
+                <i class="fa-solid fa-graduation-cap" style="color: #f1c40f;"></i> 
+                Thành thạo AI cho Dân Văn Phòng
             </a>
             
-            <!-- <a href="https://tiktok.com" class="link-item" target="_blank">
-                <i class="fab fa-tiktok"></i> TikTok
+            <a href="#" class="link-item" target="_blank">
+                <i class="fa-solid fa-chalkboard-user" style="color: #e67e22;"></i> 
+                Khóa học ChatGPT & Automation
             </a> -->
-            <a href="https://www.instagram.com/thunguyen80021" class="link-item" target="_blank">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
 
-            <a href="https://m.me/autowork.vn" class="link-item" target="_blank">
-                <i class="fas fa-comment-dots"></i> Nhắn tin
-            </a>
+
+            <div class="section-title">🛠️ Công Cụ Cần Thiết</div>
+
             <a href="https://autoworkvn.com/gamma" class="link-item" target="_blank">
-                <i class="fas fa-globe"></i>🛠️ Công cụ AI tạo Slide thần tốc (Gamma)
+                <i class="fa-solid fa-wand-magic-sparkles" style="color: #9b59b6;"></i> AI tạo Slide thần tốc (Gamma)
             </a>
+            
             <a href="https://autoworkvn.com/make" class="link-item" target="_blank">
-                <i class="fas fa-globe"></i>🛠️ Công cụ Tự động hóa (Make)
+                <i class="fa-solid fa-robot" style="color: #e67e22;"></i> Công cụ Tự động hóa (Make)
             </a>
+            
             <a href="https://autoworkvn.com/vbee" class="link-item" target="_blank">
-                <i class="fas fa-globe"></i>🗣️ AI Giọng Nói Tiếng Việt (Vbee)
+                <i class="fa-solid fa-microphone-lines" style="color: #e74c3c;"></i> AI Giọng Nói Tiếng Việt (Vbee)
             </a>
+            
             <a href="https://autoworkvn.com/elevenlab" class="link-item" target="_blank">
-                <i class="fas fa-globe"></i>🎙️ Clone Giọng Nói Đỉnh Cao (ElevenLabs)
+                <i class="fa-solid fa-wave-square" style="color: #3498db;"></i> Clone Giọng Nói Đỉnh Cao (ElevenLabs)
             </a>
 
-            <!-- <a href="https://try.elevenlabs.io/nd8tazdtuwlz" class="link-item" target="_blank">
-                <i class="fas fa-globe"></i>https://elevenlabs.io/
-            </a> -->
-            
-            <!-- <a href="https://yourwebsite.com" class="link-item" target="_blank">
-                <i class="fas fa-globe"></i> Website Cá Nhân
-            </a> -->
         </div>
 
         <div class="footer">
