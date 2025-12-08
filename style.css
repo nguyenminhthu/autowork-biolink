@@ -130,12 +130,14 @@ p.bio {
   /* 2. Chữ to và đậm hơn chút */
   font-weight: bold;
   color: white !important; /* Ép chữ màu trắng */
-  border: 2px solid white; /* Viền trắng cho sang */
+  border: 1px solid white; /* Viền trắng cho sang */
   
   /* 3. Hiệu ứng rung lắc nhẹ để mời gọi */
   animation: pulse-animation 2s infinite;
-  
+  border-radius: 4px;
+  padding: 8px 0;;
   transition: 0.5s;
+  text-decoration: none;
 }
 
 .btn-special:hover {
