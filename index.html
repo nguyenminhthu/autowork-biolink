@@ -1,711 +1,847 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoWork | Giải pháp AI & Automation cho Doanh nghiệp Việt</title>
-    <meta name="description" content="AutoWork cung cấp giải pháp AI Chatbot, Automation, và đào tạo AI thực chiến giúp doanh nghiệp SME tăng hiệu suất gấp 3 lần. Liên hệ ngay!">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="AutoWork — AI & Automation cho Doanh nghiệp Việt">
-    <meta property="og:description" content="Giải pháp AI Chatbot, Tự động hóa quy trình, và Đào tạo AI cho doanh nghiệp SME.">
-    <meta property="og:url" content="https://autoworkvn.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoWork | Giải pháp AI & Automation cho Doanh nghiệp Việt</title>
+  <meta name="description"
+    content="AutoWork cung cấp giải pháp AI Chatbot, Automation, và đào tạo AI thực chiến giúp doanh nghiệp SME tăng hiệu suất gấp 3 lần. Liên hệ ngay!">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AutoWork — AI & Automation cho Doanh nghiệp Việt">
+  <meta property="og:description"
+    content="Giải pháp AI Chatbot, Tự động hóa quy trình, và Đào tạo AI cho doanh nghiệp SME.">
+  <meta property="og:url" content="https://autoworkvn.com">
 
-    <link rel="stylesheet" href="landing.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="landing.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FM3Q5Z7PSK"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-FM3Q5Z7PSK');
-    </script>
-</head>
-<body>
-
-<!-- ─── PARTICLE BACKGROUND ─── -->
-<canvas id="particles-canvas"></canvas>
-
-<!-- ─── NAVIGATION ─── -->
-<nav class="navbar" id="navbar">
-  <div class="container">
-    <a href="#" class="nav-logo">
-      <div class="logo-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
-      <span>AutoWork</span>
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a href="#services">Dịch vụ</a>
-      <a href="#why-us">Tại sao chọn chúng tôi</a>
-      <a href="#process">Quy trình</a>
-      <a href="#showcase">Showcase</a>
-      <a href="https://m.me/autowork.vn" target="_blank" class="nav-cta">
-        <i class="fa-brands fa-facebook-messenger"></i> Liên hệ ngay
-      </a>
-    </div>
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </div>
-</nav>
-
-<!-- ─── HERO SECTION ─── -->
-<section class="hero" id="hero">
-  <div class="grid-bg"></div>
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="pulse-dot"></span>
-        AI-Powered Solutions
-      </div>
-      <h1 class="hero-title">
-        <span class="line">Tăng tốc doanh nghiệp</span>
-        <span class="line"><span class="gradient-text">bằng sức mạnh AI</span></span>
-      </h1>
-      <p class="hero-desc">
-        AutoWork giúp doanh nghiệp SME Việt Nam tự động hóa quy trình, triển khai AI Chatbot thông minh và nâng cao hiệu suất làm việc gấp 3 lần.
-      </p>
-      <div class="hero-actions">
-        <a href="https://m.me/autowork.vn" target="_blank" class="btn btn-primary" id="hero-cta-primary">
-          <i class="fa-brands fa-facebook-messenger"></i> Tư vấn miễn phí
-        </a>
-        <a href="#services" class="btn btn-outline" id="hero-cta-secondary">
-          <i class="fa-solid fa-play"></i> Khám phá dịch vụ
-        </a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-number" id="counter-clients">50+</div>
-          <div class="stat-label">Khách hàng</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number" id="counter-projects">100+</div>
-          <div class="stat-label">Dự án hoàn thành</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number" id="counter-efficiency">3x</div>
-          <div class="stat-label">Tăng hiệu suất</div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-image-wrapper">
-        <img src="images/hero-ai-brain.png" alt="AI Brain Neural Network - AutoWork" loading="eager">
-      </div>
-      <!-- Floating info cards -->
-      <div class="floating-card fc-1">
-        <div class="fc-icon"><i class="fa-solid fa-robot"></i></div>
-        <div>
-          <div class="fc-text">AI Chatbot</div>
-          <div class="fc-sub">Hoạt động 24/7</div>
-        </div>
-      </div>
-      <div class="floating-card fc-2">
-        <div class="fc-icon"><i class="fa-solid fa-gears"></i></div>
-        <div>
-          <div class="fc-text">Automation</div>
-          <div class="fc-sub">Giảm 80% thao tác thủ công</div>
-        </div>
-      </div>
-      <div class="floating-card fc-3">
-        <div class="fc-icon"><i class="fa-solid fa-chart-line"></i></div>
-        <div>
-          <div class="fc-text">ROI tăng vọt</div>
-          <div class="fc-sub">Hiệu quả đo lường được</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── TRUST BAR ─── -->
-<section class="trust-bar">
-  <div class="container">
-    <div class="trust-label">Công nghệ chúng tôi sử dụng</div>
-    <div class="trust-logos">
-      <div class="trust-item"><i class="fa-solid fa-brain"></i> OpenAI</div>
-      <div class="trust-item"><i class="fa-brands fa-google"></i> Google AI</div>
-      <div class="trust-item"><i class="fa-solid fa-robot"></i> Make.com</div>
-      <div class="trust-item"><i class="fa-solid fa-diagram-project"></i> N8N</div>
-      <div class="trust-item"><i class="fa-solid fa-cloud"></i> Azure</div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── SERVICES SECTION ─── -->
-<section class="services" id="services">
-  <div class="grid-bg"></div>
-  <div class="container">
-    <div class="services-header animate-on-scroll">
-      <div class="section-label"><i class="fa-solid fa-circle"></i> Dịch vụ của chúng tôi</div>
-      <h2 class="section-title">Giải pháp AI <span class="gradient-text">toàn diện</span></h2>
-      <p class="section-desc">Từ chatbot thông minh đến tự động hóa quy trình, chúng tôi giúp doanh nghiệp bạn hoạt động hiệu quả hơn với sức mạnh AI.</p>
-    </div>
-    <div class="services-grid">
-      <!-- Service 1: AI Chatbot -->
-      <div class="service-card animate-on-scroll" id="service-chatbot">
-        <div class="service-icon cyan">
-          <i class="fa-solid fa-comments"></i>
-        </div>
-        <h3>AI Chatbot Thông Minh</h3>
-        <p>Chatbot AI tùy chỉnh cho doanh nghiệp, tự động trả lời khách hàng 24/7, tăng tỷ lệ chuyển đổi và tiết kiệm nhân sự.</p>
-        <ul class="service-features">
-          <li><i class="fa-solid fa-check"></i> Chatbot đa nền tảng (Web, Messenger, Zalo)</li>
-          <li><i class="fa-solid fa-check"></i> Tích hợp Knowledge Base riêng</li>
-          <li><i class="fa-solid fa-check"></i> Phân tích sentiment & insight khách hàng</li>
-          <li><i class="fa-solid fa-check"></i> Handoff sang nhân viên khi cần</li>
-        </ul>
-        <a href="https://m.me/autowork.vn" target="_blank" class="learn-more">Tìm hiểu thêm <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-
-      <!-- Service 2: Automation -->
-      <div class="service-card animate-on-scroll" id="service-automation">
-        <div class="service-icon purple">
-          <i class="fa-solid fa-wand-magic-sparkles"></i>
-        </div>
-        <h3>Tự Động Hóa Quy Trình</h3>
-        <p>Xây dựng workflow automation kết nối các công cụ, ứng dụng — giảm 80% tác vụ lặp lại, tập trung vào việc quan trọng.</p>
-        <ul class="service-features">
-          <li><i class="fa-solid fa-check"></i> Kết nối Google Sheets, CRM, Email...</li>
-          <li><i class="fa-solid fa-check"></i> Tự động gửi thông báo Telegram/Zalo</li>
-          <li><i class="fa-solid fa-check"></i> Đồng bộ dữ liệu real-time</li>
-          <li><i class="fa-solid fa-check"></i> Báo cáo tự động theo lịch</li>
-        </ul>
-        <a href="https://m.me/autowork.vn" target="_blank" class="learn-more">Tìm hiểu thêm <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-
-      <!-- Service 3: AI Training -->
-      <div class="service-card animate-on-scroll" id="service-training">
-        <div class="service-icon pink">
-          <i class="fa-solid fa-graduation-cap"></i>
-        </div>
-        <h3>Đào Tạo AI Thực Chiến</h3>
-        <p>Khóa học từ cơ bản đến nâng cao, giúp đội ngũ của bạn thành thạo AI trong công việc hàng ngày.</p>
-        <ul class="service-features">
-          <li><i class="fa-solid fa-check"></i> ChatGPT / Gemini cho dân văn phòng</li>
-          <li><i class="fa-solid fa-check"></i> Excel AI & Data Analysis</li>
-          <li><i class="fa-solid fa-check"></i> AI Content & Marketing</li>
-          <li><i class="fa-solid fa-check"></i> Workshop trực tiếp tại doanh nghiệp</li>
-        </ul>
-        <a href="https://m.me/autowork.vn" target="_blank" class="learn-more">Tìm hiểu thêm <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-
-      <!-- Service 4: AI Consulting -->
-      <div class="service-card animate-on-scroll" id="service-consulting">
-        <div class="service-icon emerald">
-          <i class="fa-solid fa-lightbulb"></i>
-        </div>
-        <h3>Tư Vấn Giải Pháp AI</h3>
-        <p>Phân tích nghiệp vụ, đề xuất lộ trình ứng dụng AI phù hợp nhất với quy mô và ngân sách của bạn.</p>
-        <ul class="service-features">
-          <li><i class="fa-solid fa-check"></i> Khảo sát quy trình hiện tại</li>
-          <li><i class="fa-solid fa-check"></i> Đề xuất giải pháp tối ưu</li>
-          <li><i class="fa-solid fa-check"></i> Lộ trình triển khai rõ ràng</li>
-          <li><i class="fa-solid fa-check"></i> Đánh giá ROI & KPI</li>
-        </ul>
-        <a href="https://m.me/autowork.vn" target="_blank" class="learn-more">Tìm hiểu thêm <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── WHY CHOOSE US ─── -->
-<section class="why-us" id="why-us">
-  <div class="container">
-    <div class="text-center animate-on-scroll">
-      <div class="section-label"><i class="fa-solid fa-circle"></i> Tại sao chọn AutoWork</div>
-      <h2 class="section-title">Con số <span class="gradient-text">nói lên tất cả</span></h2>
-      <p class="section-desc mx-auto">Chúng tôi không chỉ triển khai công nghệ — chúng tôi đồng hành cùng bạn biến AI thành lợi thế cạnh tranh thực sự.</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-card animate-on-scroll">
-        <div class="why-number">80%</div>
-        <h3>Giảm tác vụ thủ công</h3>
-        <p>Automation loại bỏ hầu hết tác vụ nhập liệu, gửi mail, đồng bộ dữ liệu lặp đi lặp lại.</p>
-      </div>
-      <div class="why-card animate-on-scroll">
-        <div class="why-number">24/7</div>
-        <h3>Chatbot không nghỉ</h3>
-        <p>AI Chatbot hoạt động xuyên suốt, trả lời khách hàng ngay cả khi bạn đang ngủ.</p>
-      </div>
-      <div class="why-card animate-on-scroll">
-        <div class="why-number">3x</div>
-        <h3>Tăng hiệu suất</h3>
-        <p>Trung bình doanh nghiệp tăng gấp 3 lần năng suất sau khi áp dụng giải pháp AI của chúng tôi.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── PROCESS ─── -->
-<section class="process" id="process">
-  <div class="container">
-    <div class="text-center animate-on-scroll">
-      <div class="section-label"><i class="fa-solid fa-circle"></i> Quy trình làm việc</div>
-      <h2 class="section-title">4 bước để <span class="gradient-text">chuyển đổi AI</span></h2>
-      <p class="section-desc mx-auto">Quy trình rõ ràng, minh bạch — bạn luôn được đồng hành ở mọi giai đoạn.</p>
-    </div>
-    <div class="process-steps">
-      <div class="step-item animate-on-scroll">
-        <div class="step-number">01</div>
-        <h3>Khảo sát & Phân tích</h3>
-        <p>Lắng nghe nhu cầu, phân tích quy trình hiện tại và xác định điểm cần cải thiện.</p>
-      </div>
-      <div class="step-item animate-on-scroll">
-        <div class="step-number">02</div>
-        <h3>Thiết kế Giải pháp</h3>
-        <p>Đề xuất giải pháp AI phù hợp, lên roadmap triển khai chi tiết theo giai đoạn.</p>
-      </div>
-      <div class="step-item animate-on-scroll">
-        <div class="step-number">03</div>
-        <h3>Triển khai & Tích hợp</h3>
-        <p>Xây dựng, cấu hình và tích hợp vào hệ thống hiện có. Test kỹ trước go-live.</p>
-      </div>
-      <div class="step-item animate-on-scroll">
-        <div class="step-number">04</div>
-        <h3>Vận hành & Tối ưu</h3>
-        <p>Hỗ trợ vận hành, theo dõi hiệu quả và liên tục tối ưu dựa trên dữ liệu thực.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── SHOWCASE ─── -->
-<section class="showcase" id="showcase">
-  <div class="container">
-    <div class="text-center animate-on-scroll">
-      <div class="section-label"><i class="fa-solid fa-circle"></i> Showcase</div>
-      <h2 class="section-title">Dự án <span class="gradient-text">tiêu biểu</span></h2>
-      <p class="section-desc mx-auto">Một số giải pháp AI & Automation mà chúng tôi đã triển khai thành công.</p>
-    </div>
-    <div class="showcase-grid">
-      <div class="showcase-item animate-on-scroll">
-        <img src="images/service-chatbot.png" alt="AI Chatbot cho doanh nghiệp" loading="lazy">
-        <div class="showcase-overlay">
-          <h3>AI Chatbot Tư Vấn Sản Phẩm</h3>
-          <p>Chatbot tự động tư vấn, thu thập lead cho chuỗi bán lẻ</p>
-        </div>
-      </div>
-      <div class="showcase-item animate-on-scroll">
-        <img src="images/service-automation.png" alt="Workflow Automation" loading="lazy">
-        <div class="showcase-overlay">
-          <h3>Workflow Automation</h3>
-          <p>Tự động hóa quy trình quản lý đơn hàng & báo cáo doanh thu</p>
-        </div>
-      </div>
-      <div class="showcase-item animate-on-scroll">
-        <img src="images/service-data.png" alt="AI Data Analytics" loading="lazy">
-        <div class="showcase-overlay">
-          <h3>AI Data Analytics</h3>
-          <p>Dashboard phân tích dữ liệu real-time cho team marketing</p>
-        </div>
-      </div>
-      <div class="showcase-item animate-on-scroll">
-        <img src="images/service-training.png" alt="AI Training Workshop" loading="lazy">
-        <div class="showcase-overlay">
-          <h3>AI Training Workshop</h3>
-          <p>Đào tạo AI cho 200+ nhân viên tập đoàn bất động sản</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── TESTIMONIALS ─── -->
-<section class="testimonials" id="testimonials">
-  <div class="container">
-    <div class="text-center animate-on-scroll">
-      <div class="section-label"><i class="fa-solid fa-circle"></i> Đánh giá khách hàng</div>
-      <h2 class="section-title">Khách hàng <span class="gradient-text">nói gì về chúng tôi</span></h2>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card animate-on-scroll">
-        <div class="testimonial-stars">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-        </div>
-        <blockquote>"Chatbot AI của AutoWork giúp shop mình trả lời khách hàng 24/7. Doanh số tăng 40% chỉ sau 2 tháng triển khai. Quá tuyệt vời!"</blockquote>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar-placeholder" style="background: linear-gradient(135deg, #00e5ff, #a855f7);">T</div>
-          <div class="author-info">
-            <h4>Chị Thanh Tâm</h4>
-            <p>Chủ shop thời trang online</p>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card animate-on-scroll">
-        <div class="testimonial-stars">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-        </div>
-        <blockquote>"Automation giúp team mình tiết kiệm 20 giờ mỗi tuần cho các tác vụ báo cáo. Giờ mọi người tập trung vào việc quan trọng hơn."</blockquote>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar-placeholder" style="background: linear-gradient(135deg, #a855f7, #ec4899);">M</div>
-          <div class="author-info">
-            <h4>Anh Minh Đức</h4>
-            <p>Giám đốc vận hành — Công ty XYZ</p>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card animate-on-scroll">
-        <div class="testimonial-stars">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-        </div>
-        <blockquote>"Khóa đào tạo AI rất thiết thực, team marketing áp dụng ngay được. Đội ngũ AutoWork support rất nhiệt tình và chuyên nghiệp."</blockquote>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar-placeholder" style="background: linear-gradient(135deg, #10b981, #3b82f6);">H</div>
-          <div class="author-info">
-            <h4>Chị Hương Giang</h4>
-            <p>Marketing Manager — Startup công nghệ</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── CTA SECTION ─── -->
-<section class="cta-section" id="contact">
-  <div class="container">
-    <div class="cta-box animate-on-scroll">
-      <h2>Sẵn sàng <span class="gradient-text">chuyển đổi AI</span>?</h2>
-      <p>Liên hệ ngay để nhận tư vấn miễn phí về giải pháp AI phù hợp nhất cho doanh nghiệp của bạn.</p>
-      <div class="cta-buttons">
-        <a href="https://m.me/autowork.vn" target="_blank" class="btn btn-primary" id="cta-messenger">
-          <i class="fa-brands fa-facebook-messenger"></i> Nhắn tin Messenger
-        </a>
-        <a href="mailto:hello@autoworkvn.com" class="btn btn-outline" id="cta-email">
-          <i class="fa-solid fa-envelope"></i> Gửi Email
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── FOOTER ─── -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="#" class="nav-logo">
-          <div class="logo-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
-          <span>AutoWork</span>
-        </a>
-        <p>Giải pháp AI & Automation giúp doanh nghiệp Việt Nam tăng tốc vận hành và nâng cao hiệu suất.</p>
-        <div class="footer-social">
-          <a href="https://www.facebook.com/autowork.vn/" target="_blank" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://m.me/autowork.vn" target="_blank" aria-label="Messenger" title="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
-          <a href="https://www.instagram.com/thunguyen80021" target="_blank" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="mailto:hello@autoworkvn.com" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-      </div>
-      <div class="footer-column">
-        <h4>Dịch vụ</h4>
-        <a href="#service-chatbot">AI Chatbot</a>
-        <a href="#service-automation">Automation</a>
-        <a href="#service-training">Đào tạo AI</a>
-        <a href="#service-consulting">Tư vấn AI</a>
-      </div>
-      <div class="footer-column">
-        <h4>Tài nguyên</h4>
-        <a href="https://bit.ly/email-ai-sheet" target="_blank">Email AI Sheet</a>
-        <a href="/files/AutoWork_Bo_Vu_Khi_Excel_AI_2025.pdf" target="_blank">Excel AI Guide</a>
-        <a href="/files/Bo-Qua-Tang-AutoNotify.pdf" target="_blank">AutoNotify Guide</a>
-      </div>
-      <div class="footer-column">
-        <h4>Công cụ AI</h4>
-        <a href="https://autoworkvn.com/gamma" target="_blank">Gamma AI Slides</a>
-        <a href="https://autoworkvn.com/make" target="_blank">Make.com</a>
-        <a href="https://autoworkvn.com/vbee" target="_blank">Vbee AI Voice</a>
-        <a href="https://autoworkvn.com/elevenlab" target="_blank">ElevenLabs</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2025 AutoWork. All rights reserved.</span>
-      <span>Made with <i class="fa-solid fa-heart" style="color: var(--accent-pink);"></i> by AutoWork</span>
-    </div>
-  </div>
-</footer>
-
-<!-- ─── SCROLL TO TOP ─── -->
-<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-  <i class="fa-solid fa-arrow-up"></i>
-</button>
-
-<!-- ─── JAVASCRIPT ─── -->
-<script>
-// ═══════════════════════════════════════════════
-// PARTICLE SYSTEM
-// ═══════════════════════════════════════════════
-const canvas = document.getElementById('particles-canvas');
-const ctx = canvas.getContext('2d');
-let particles = [];
-let mouseX = 0, mouseY = 0;
-
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-
-class Particle {
-  constructor() {
-    this.reset();
-  }
-  reset() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 2 + 0.5;
-    this.speedX = (Math.random() - 0.5) * 0.5;
-    this.speedY = (Math.random() - 0.5) * 0.5;
-    this.opacity = Math.random() * 0.5 + 0.1;
-    this.color = ['#00e5ff', '#a855f7', '#ec4899', '#3b82f6'][Math.floor(Math.random() * 4)];
-  }
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-    
-    // Mouse interaction
-    const dx = mouseX - this.x;
-    const dy = mouseY - this.y;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    if (dist < 150) {
-      this.x -= dx * 0.01;
-      this.y -= dy * 0.01;
-      this.opacity = Math.min(this.opacity + 0.02, 0.8);
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FM3Q5Z7PSK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-FM3Q5Z7PSK');
+  </script>
+  <style>
+    /* ── LOADING SCREEN ── */
+    #loader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: var(--bg-primary, #06060f);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
     }
-    
-    if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
-      this.reset();
+
+    #loader.hide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
     }
-  }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = this.color;
-    ctx.globalAlpha = this.opacity;
-    ctx.fill();
-    ctx.globalAlpha = 1;
-  }
-}
 
-function initParticles() {
-  const count = window.innerWidth < 768 ? 40 : 80;
-  particles = [];
-  for (let i = 0; i < count; i++) {
-    particles.push(new Particle());
-  }
-}
+    .loader-logo {
+      font-family: 'Inter', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #00e5ff, #a855f7, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+    }
 
-function connectParticles() {
-  for (let i = 0; i < particles.length; i++) {
-    for (let j = i + 1; j < particles.length; j++) {
-      const dx = particles[i].x - particles[j].x;
-      const dy = particles[i].y - particles[j].y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < 120) {
-        ctx.beginPath();
-        ctx.moveTo(particles[i].x, particles[i].y);
-        ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(0, 229, 255, ${0.08 * (1 - dist / 120)})`;
-        ctx.lineWidth = 0.5;
-        ctx.stroke();
+    .loader-bar-wrap {
+      width: 200px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .loader-bar {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, #00e5ff, #a855f7, #ec4899, transparent);
+      animation: loaderSlide 1.4s ease forwards;
+      border-radius: 2px;
+    }
+
+    @keyframes loaderSlide {
+      to {
+        left: 100%;
       }
     }
-  }
-}
 
-function animateParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles.forEach(p => { p.update(); p.draw(); });
-  connectParticles();
-  requestAnimationFrame(animateParticles);
-}
-
-window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
-window.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
-
-resizeCanvas();
-initParticles();
-animateParticles();
-
-// ═══════════════════════════════════════════════
-// NAVBAR SCROLL EFFECT
-// ═══════════════════════════════════════════════
-const navbar = document.getElementById('navbar');
-const scrollTopBtn = document.getElementById('scrollTop');
-
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  navbar.classList.toggle('scrolled', scrollY > 50);
-  scrollTopBtn.classList.toggle('visible', scrollY > 400);
-});
-
-scrollTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// ═══════════════════════════════════════════════
-// MOBILE MENU
-// ═══════════════════════════════════════════════
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navLinks = document.getElementById('navLinks');
-
-mobileMenuBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  const icon = mobileMenuBtn.querySelector('i');
-  icon.classList.toggle('fa-bars');
-  icon.classList.toggle('fa-xmark');
-});
-
-// Close mobile menu on link click
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    const icon = mobileMenuBtn.querySelector('i');
-    icon.classList.add('fa-bars');
-    icon.classList.remove('fa-xmark');
-  });
-});
-
-// ═══════════════════════════════════════════════
-// SCROLL ANIMATIONS (Intersection Observer)
-// ═══════════════════════════════════════════════
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, index) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, index * 100);
-      observer.unobserve(entry.target);
+    .loader-pct {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: rgba(240, 240, 245, 0.4);
+      letter-spacing: 0.2em;
     }
-  });
-}, observerOptions);
+  </style>
+</head>
 
-document.querySelectorAll('.animate-on-scroll').forEach(el => {
-  observer.observe(el);
-});
+<body>
 
-// ═══════════════════════════════════════════════
-// COUNTER ANIMATION
-// ═══════════════════════════════════════════════
-function animateCounter(element, target, suffix = '', duration = 2000) {
-  const start = 0;
-  const startTime = performance.now();
-  
-  function update(currentTime) {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const current = Math.floor(eased * target);
-    element.textContent = current + suffix;
-    if (progress < 1) requestAnimationFrame(update);
-  }
-  requestAnimationFrame(update);
-}
+  <!-- ─── LOADING SCREEN ─── -->
+  <div id="loader">
+    <div class="loader-logo">AutoWork VN</div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar"></div>
+    </div>
+    <div class="loader-pct" id="loaderPct">0%</div>
+  </div>
 
-const statsObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      animateCounter(document.getElementById('counter-clients'), 50, '+');
-      animateCounter(document.getElementById('counter-projects'), 100, '+');
-      document.getElementById('counter-efficiency').textContent = '3x';
-      statsObserver.unobserve(entry.target);
+  <!-- ─── PARTICLE BACKGROUND ─── -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ─── NAVIGATION ─── -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon"><img src="images/logo-autowork.png" alt="AutoWork Logo"
+            style="width:100%;height:100%;object-fit:cover;border-radius:inherit;"></div>
+        <span>AutoWork</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#services">Dịch vụ</a>
+        <a href="#why-us">Tại sao chọn AutoWork</a>
+        <a href="#process">Quy trình</a>
+        <a href="#showcase">Showcase</a>
+        <a href="https://m.me/autowork.vn" target="_blank" class="nav-cta">
+          <i class="fa-brands fa-facebook-messenger"></i> Liên hệ ngay
+        </a>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO SECTION ─── -->
+  <section class="hero" id="hero">
+    <div class="grid-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          AI-Powered Solutions
+        </div>
+        <h1 class="hero-title">
+          <span class="line">Tăng tốc doanh nghiệp bằng</span>
+          <span class="line"><span class="gradient-text">sức mạnh AI</span></span>
+        </h1>
+        <p class="hero-desc">
+          AutoWork giúp doanh nghiệp SME Việt Nam tự động hóa quy trình, triển khai AI Chatbot thông minh và nâng cao
+          hiệu suất làm việc gấp 3 lần.
+        </p>
+        <div class="hero-actions">
+          <a href="https://m.me/autowork.vn" target="_blank" class="btn btn-primary" id="hero-cta-primary">
+            <i class="fa-brands fa-facebook-messenger"></i> Tư vấn miễn phí
+          </a>
+          <a href="#services" class="btn btn-outline" id="hero-cta-secondary">
+            <i class="fa-solid fa-play"></i> Khám phá dịch vụ
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number" id="counter-clients">50+</div>
+            <div class="stat-label">Khách hàng</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" id="counter-projects">100+</div>
+            <div class="stat-label">Dự án hoàn thành</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" id="counter-efficiency">3x</div>
+            <div class="stat-label">Tăng hiệu suất</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <img src="images/hero-ai-brain.png" alt="AI Brain Neural Network - AutoWork" loading="eager">
+        </div>
+        <!-- Floating info cards -->
+        <div class="floating-card fc-1">
+          <div class="fc-icon"><i class="fa-solid fa-robot"></i></div>
+          <div>
+            <div class="fc-text">AI Chatbot</div>
+            <div class="fc-sub">Hoạt động 24/7</div>
+          </div>
+        </div>
+        <div class="floating-card fc-2">
+          <div class="fc-icon"><i class="fa-solid fa-gears"></i></div>
+          <div>
+            <div class="fc-text">Automation</div>
+            <div class="fc-sub">Giảm 80% thao tác thủ công</div>
+          </div>
+        </div>
+        <div class="floating-card fc-3">
+          <div class="fc-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div>
+            <div class="fc-text">ROI tăng vọt</div>
+            <div class="fc-sub">Hiệu quả đo lường được</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TRUST BAR ─── -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-label">Công nghệ chúng tôi sử dụng</div>
+      <div class="trust-logos">
+        <div class="trust-item"><i class="fa-solid fa-brain"></i> OpenAI</div>
+        <div class="trust-item"><i class="fa-brands fa-google"></i> Google AI</div>
+        <div class="trust-item"><i class="fa-solid fa-robot"></i> Make.com</div>
+        <div class="trust-item"><i class="fa-solid fa-diagram-project"></i> N8N</div>
+        <div class="trust-item"><i class="fa-solid fa-cloud"></i> Azure</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES SECTION ─── -->
+  <section class="services" id="services">
+    <div class="grid-bg"></div>
+    <div class="container">
+      <div class="services-header animate-on-scroll">
+        <div class="section-label"><i class="fa-solid fa-circle"></i> Dịch vụ của chúng tôi</div>
+        <h2 class="section-title">Giải pháp AI <span class="gradient-text">toàn diện</span></h2>
+        <p class="section-desc">Từ chatbot thông minh đến tự động hóa quy trình, chúng tôi giúp doanh nghiệp bạn hoạt
+          động hiệu quả hơn với sức mạnh AI.</p>
+      </div>
+      <div class="services-grid">
+        <!-- Service 1: AI Chatbot -->
+        <div class="service-card animate-on-scroll" id="service-chatbot">
+          <div class="service-icon cyan">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <h3>AI Chatbot Thông Minh</h3>
+          <p>Chatbot AI tùy chỉnh cho doanh nghiệp, tự động trả lời khách hàng 24/7, tăng tỷ lệ chuyển đổi và tiết kiệm
+            nhân sự.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Chatbot đa nền tảng (Web, Messenger, Zalo)</li>
+            <li><i class="fa-solid fa-check"></i> Tích hợp Knowledge Base riêng</li>
+            <li><i class="fa-solid fa-check"></i> Phân tích sentiment & insight khách hàng</li>
+            <li><i class="fa-solid fa-check"></i> Handoff sang nhân viên khi cần</li>
+          </ul>
+          <a href="https://m.me/autowork.vn" target="_blank" class="learn-more">Tìm hiểu thêm <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 2: Automation -->
+        <div class="service-card animate-on-scroll" id="service-automation">
+          <div class="service-icon purple">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3>Tự Động Hóa Quy Trình</h3>
+          <p>Xây dựng workflow automation kết nối các công cụ, ứng dụng — giảm 80% tác vụ lặp lại, tập trung vào việc
+            quan trọng.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Kết nối Google Sheets, CRM, Email...</li>
+            <li><i class="fa-solid fa-check"></i> Tự động gửi thông báo Telegram/Zalo</li>
+            <li><i class="fa-solid fa-check"></i> Đồng bộ dữ liệu real-time</li>
+            <li><i class="fa-solid fa-check"></i> Báo cáo tự động theo lịch</li>
+          </ul>
+          <a href="https://m.me/autowork.vn" target="_blank" class="learn-more">Tìm hiểu thêm <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 3: AI Training-->
+        <!-- <div class="service-card animate-on-scroll" id="service-training">
+          <div class="service-icon pink">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3>Đào Tạo AI Thực Chiến</h3>
+          <p>Khóa học từ cơ bản đến nâng cao, giúp đội ngũ của bạn thành thạo AI trong công việc hàng ngày.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> ChatGPT / Gemini cho dân văn phòng</li>
+            <li><i class="fa-solid fa-check"></i> Excel AI & Data Analysis</li>
+            <li><i class="fa-solid fa-check"></i> AI Content & Marketing</li>
+            <li><i class="fa-solid fa-check"></i> Workshop trực tiếp tại doanh nghiệp</li>
+          </ul>
+          <a href="https://m.me/autowork.vn" target="_blank" class="learn-more">Tìm hiểu thêm <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div> -->
+
+        <!-- Service 4: AI Consulting -->
+        <div class="service-card animate-on-scroll" id="service-consulting">
+          <div class="service-icon emerald">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h3>Tư Vấn Giải Pháp AI</h3>
+          <p>Phân tích nghiệp vụ, đề xuất lộ trình ứng dụng AI phù hợp nhất với quy mô và ngân sách của bạn.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Khảo sát quy trình hiện tại</li>
+            <li><i class="fa-solid fa-check"></i> Đề xuất giải pháp tối ưu</li>
+            <li><i class="fa-solid fa-check"></i> Lộ trình triển khai rõ ràng</li>
+            <li><i class="fa-solid fa-check"></i> Đánh giá ROI & KPI</li>
+          </ul>
+          <a href="https://m.me/autowork.vn" target="_blank" class="learn-more">Tìm hiểu thêm <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WHY CHOOSE US ─── -->
+  <section class="why-us" id="why-us">
+    <div class="container">
+      <div class="text-center animate-on-scroll">
+        <div class="section-label"><i class="fa-solid fa-circle"></i> Tại sao chọn AutoWork</div>
+        <h2 class="section-title">Con số <span class="gradient-text">nói lên tất cả</span></h2>
+        <p class="section-desc mx-auto">Chúng tôi không chỉ triển khai công nghệ — chúng tôi đồng hành cùng bạn biến AI
+          thành lợi thế cạnh tranh thực sự.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card animate-on-scroll">
+          <div class="why-number">80%</div>
+          <h3>Giảm tác vụ thủ công</h3>
+          <p>Automation loại bỏ hầu hết tác vụ nhập liệu, gửi mail, đồng bộ dữ liệu lặp đi lặp lại.</p>
+        </div>
+        <div class="why-card animate-on-scroll">
+          <div class="why-number">24/7</div>
+          <h3>Chatbot không nghỉ</h3>
+          <p>AI Chatbot hoạt động xuyên suốt, trả lời khách hàng ngay cả khi bạn đang ngủ.</p>
+        </div>
+        <div class="why-card animate-on-scroll">
+          <div class="why-number">3x</div>
+          <h3>Tăng hiệu suất</h3>
+          <p>Trung bình doanh nghiệp tăng gấp 3 lần năng suất sau khi áp dụng giải pháp AI của chúng tôi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROCESS ─── -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="text-center animate-on-scroll">
+        <div class="section-label"><i class="fa-solid fa-circle"></i> Quy trình làm việc</div>
+        <h2 class="section-title">4 bước để <span class="gradient-text">chuyển đổi AI</span></h2>
+        <p class="section-desc mx-auto">Quy trình rõ ràng, minh bạch — bạn luôn được đồng hành ở mọi giai đoạn.</p>
+      </div>
+      <div class="process-steps">
+        <div class="step-item animate-on-scroll">
+          <div class="step-number">01</div>
+          <h3>Khảo sát & Phân tích</h3>
+          <p>Lắng nghe nhu cầu, phân tích quy trình hiện tại và xác định điểm cần cải thiện.</p>
+        </div>
+        <div class="step-item animate-on-scroll">
+          <div class="step-number">02</div>
+          <h3>Thiết kế Giải pháp</h3>
+          <p>Đề xuất giải pháp AI phù hợp, lên roadmap triển khai chi tiết theo giai đoạn.</p>
+        </div>
+        <div class="step-item animate-on-scroll">
+          <div class="step-number">03</div>
+          <h3>Triển khai & Tích hợp</h3>
+          <p>Xây dựng, cấu hình và tích hợp vào hệ thống hiện có. Test kỹ trước go-live.</p>
+        </div>
+        <div class="step-item animate-on-scroll">
+          <div class="step-number">04</div>
+          <h3>Vận hành & Tối ưu</h3>
+          <p>Hỗ trợ vận hành, theo dõi hiệu quả và liên tục tối ưu dựa trên dữ liệu thực.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SHOWCASE ─── -->
+  <section class="showcase" id="showcase">
+    <div class="container">
+      <div class="text-center animate-on-scroll">
+        <div class="section-label"><i class="fa-solid fa-circle"></i> Showcase</div>
+        <h2 class="section-title">Dự án <span class="gradient-text">tiêu biểu</span></h2>
+        <p class="section-desc mx-auto">Một số giải pháp AI & Automation mà chúng tôi đã triển khai thành công.</p>
+      </div>
+      <div class="showcase-grid">
+        <div class="showcase-item animate-on-scroll">
+          <img src="images/service-chatbot.png" alt="AI Chatbot cho doanh nghiệp" loading="lazy">
+          <div class="showcase-overlay">
+            <h3>AI Chatbot Tư Vấn Sản Phẩm</h3>
+            <p>Chatbot tự động tư vấn, thu thập lead cho chuỗi bán lẻ</p>
+          </div>
+        </div>
+        <div class="showcase-item animate-on-scroll">
+          <img src="images/service-automation.png" alt="Workflow Automation" loading="lazy">
+          <div class="showcase-overlay">
+            <h3>Workflow Automation</h3>
+            <p>Tự động hóa quy trình quản lý đơn hàng & báo cáo doanh thu</p>
+          </div>
+        </div>
+        <div class="showcase-item animate-on-scroll">
+          <img src="images/service-data.png" alt="AI Data Analytics" loading="lazy">
+          <div class="showcase-overlay">
+            <h3>AI Data Analytics</h3>
+            <p>Dashboard phân tích dữ liệu real-time cho team marketing</p>
+          </div>
+        </div>
+        <!-- <div class="showcase-item animate-on-scroll">
+          <img src="images/service-training.png" alt="AI Training Workshop" loading="lazy">
+          <div class="showcase-overlay">
+            <h3>AI Training Workshop</h3>
+            <p>Đào tạo AI cho 200+ nhân viên tập đoàn bất động sản</p>
+          </div>
+        </div> -->
+
+        <div class="showcase-item animate-on-scroll">
+          <img src="images/ai-agent.png" alt="AI Agent" loading="lazy">
+          <div class="showcase-overlay">
+            <h3>AI Agent</h3>
+            <p>AI Agent mở rộng thực hiện các tác vụ phức tạp đặc thù</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─── -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="text-center animate-on-scroll">
+        <div class="section-label"><i class="fa-solid fa-circle"></i> Đánh giá khách hàng</div>
+        <h2 class="section-title">Khách hàng <span class="gradient-text">nói gì về chúng tôi</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <blockquote>"Chatbot AI của AutoWork giúp shop mình trả lời khách hàng 24/7. Doanh số tăng 40% chỉ sau 2 tháng
+            triển khai. Quá tuyệt vời!"</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar-placeholder" style="background: linear-gradient(135deg, #00e5ff, #a855f7);">T
+            </div>
+            <div class="author-info">
+              <h4>Chị Thanh Tâm</h4>
+              <p>Chủ shop thời trang online</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <blockquote>"Automation giúp team mình tiết kiệm 20 giờ mỗi tuần cho các tác vụ báo cáo. Giờ mọi người tập
+            trung vào việc quan trọng hơn."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar-placeholder" style="background: linear-gradient(135deg, #a855f7, #ec4899);">M
+            </div>
+            <div class="author-info">
+              <h4>Anh Minh Đức</h4>
+              <p>Giám đốc vận hành</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <!-- <blockquote>"Khóa đào tạo AI rất thiết thực, team marketing áp dụng ngay được. Đội ngũ AutoWork support rất
+            nhiệt tình và chuyên nghiệp."</blockquote> -->
+          <blockquote>"AI Agent của AutoWork xử lý giúp tôi thực hiện các công việc riêng của tôi. Bây giờ tôi thấy làm
+            việc nhẹ nhàng hơn rất nhiều. Tôi rất yêu AI Agent"</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar-placeholder" style="background: linear-gradient(135deg, #10b981, #3b82f6);">H
+            </div>
+            <div class="author-info">
+              <h4>Chị Hương Giang</h4>
+              <p>Marketing Manager — Startup công nghệ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA SECTION ─── -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="cta-box animate-on-scroll">
+        <h2>Sẵn sàng <span class="gradient-text">chuyển đổi AI</span>?</h2>
+        <p>Liên hệ ngay để nhận tư vấn miễn phí về giải pháp AI phù hợp nhất cho doanh nghiệp của bạn.</p>
+        <div class="cta-buttons">
+          <a href="https://m.me/autowork.vn" target="_blank" class="btn btn-primary" id="cta-messenger">
+            <i class="fa-brands fa-facebook-messenger"></i> Nhắn tin Messenger
+          </a>
+          <a href="mailto:hello@autoworkvn.com" class="btn btn-outline" id="cta-email">
+            <i class="fa-solid fa-envelope"></i> Gửi Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <div class="logo-icon"><img src="images/logo-autowork.png" alt="AutoWork Logo"
+                style="width:100%;height:100%;object-fit:cover;border-radius:inherit;"></div>
+            <span>AutoWork</span>
+          </a>
+          <p>Giải pháp AI & Automation giúp doanh nghiệp Việt Nam tăng tốc vận hành và nâng cao hiệu suất.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/autowork.vn/" target="_blank" aria-label="Facebook" title="Facebook"><i
+                class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://m.me/autowork.vn" target="_blank" aria-label="Messenger" title="Messenger"><i
+                class="fa-brands fa-facebook-messenger"></i></a>
+            <!-- <a href="https://www.instagram.com/thunguyen80021" target="_blank" aria-label="Instagram"
+              title="Instagram"><i class="fa-brands fa-instagram"></i></a> -->
+            <a href="mailto:hello@autoworkvn.com" aria-label="Email" title="Email"><i
+                class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Dịch vụ</h4>
+          <a href="#service-chatbot">AI Chatbot</a>
+          <a href="#service-automation">Automation</a>
+          <!-- <a href="#service-training">Đào tạo AI</a> -->
+          <a href="#service-consulting">Tư vấn AI</a>
+        </div>
+        <div class="footer-column">
+          <h4>Tài nguyên</h4>
+          <a href="https://bit.ly/email-ai-sheet" target="_blank">Email AI Sheet</a>
+          <a href="/files/AutoWork_Bo_Vu_Khi_Excel_AI_2025.pdf" target="_blank">Excel AI Guide</a>
+          <a href="/files/Bo-Qua-Tang-AutoNotify.pdf" target="_blank">AutoNotify Guide</a>
+        </div>
+        <div class="footer-column">
+          <h4>Công cụ AI</h4>
+          <a href="https://autoworkvn.com/gamma" target="_blank">Gamma AI Slides</a>
+          <a href="https://autoworkvn.com/make" target="_blank">Make.com</a>
+          <a href="https://autoworkvn.com/vbee" target="_blank">Vbee AI Voice</a>
+          <a href="https://autoworkvn.com/elevenlab" target="_blank">ElevenLabs</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 AutoWork. All rights reserved.</span>
+        <span>Made with <i class="fa-solid fa-heart" style="color: var(--accent-pink);"></i> by AutoWork</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── SCROLL TO TOP ─── -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ─── JAVASCRIPT ─── -->
+  <script>
+    // ═══════════════════════════════════════════════
+    // LOADING SCREEN
+    // ═══════════════════════════════════════════════
+    (function () {
+      let pct = 0;
+      const pctEl = document.getElementById('loaderPct');
+      const loaderInterval = setInterval(() => {
+        pct += Math.random() * 15;
+        if (pct >= 100) { pct = 100; clearInterval(loaderInterval); }
+        if (pctEl) pctEl.textContent = Math.floor(pct) + '%';
+      }, 120);
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const loader = document.getElementById('loader');
+          if (loader) loader.classList.add('hide');
+        }, 1600);
+      });
+    })();
+
+    // ═══════════════════════════════════════════════
+    // PARTICLE SYSTEM
+    // ═══════════════════════════════════════════════
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let mouseX = 0, mouseY = 0;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     }
-  });
-}, { threshold: 0.5 });
 
-const heroStats = document.querySelector('.hero-stats');
-if (heroStats) statsObserver.observe(heroStats);
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.5;
+        this.speedY = (Math.random() - 0.5) * 0.5;
+        this.opacity = Math.random() * 0.5 + 0.1;
+        this.color = ['#00e5ff', '#a855f7', '#ec4899', '#3b82f6'][Math.floor(Math.random() * 4)];
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
 
-// ═══════════════════════════════════════════════
-// TYPING EFFECT FOR HERO TITLE
-// ═══════════════════════════════════════════════
-const typingPhrases = ['bằng sức mạnh AI', 'với Automation', 'cùng AI Chatbot', 'với dữ liệu thông minh'];
-let phraseIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-const gradientSpan = document.querySelector('.hero-title .gradient-text');
+        // Mouse interaction
+        const dx = mouseX - this.x;
+        const dy = mouseY - this.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 150) {
+          this.x -= dx * 0.01;
+          this.y -= dy * 0.01;
+          this.opacity = Math.min(this.opacity + 0.02, 0.8);
+        }
 
-function typeEffect() {
-  const currentPhrase = typingPhrases[phraseIndex];
-  
-  if (isDeleting) {
-    gradientSpan.textContent = currentPhrase.substring(0, charIndex - 1);
-    charIndex--;
-  } else {
-    gradientSpan.textContent = currentPhrase.substring(0, charIndex + 1);
-    charIndex++;
-  }
-  
-  gradientSpan.classList.add('typing-text');
-  
-  let speed = isDeleting ? 40 : 80;
-  
-  if (!isDeleting && charIndex === currentPhrase.length) {
-    speed = 2000; // Pause at end
-    isDeleting = true;
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    phraseIndex = (phraseIndex + 1) % typingPhrases.length;
-    speed = 500;
-  }
-  
-  setTimeout(typeEffect, speed);
-}
-
-// Start typing effect after page load
-setTimeout(typeEffect, 2000);
-
-// ═══════════════════════════════════════════════
-// SMOOTH SCROLL FOR ANCHOR LINKS
-// ═══════════════════════════════════════════════
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      const offset = 80; // navbar height
-      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+          this.reset();
+        }
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.globalAlpha = this.opacity;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+      }
     }
-  });
-});
 
-// ═══════════════════════════════════════════════
-// SERVICE CARD TILT EFFECT
-// ═══════════════════════════════════════════════
-document.querySelectorAll('.service-card').forEach(card => {
-  card.addEventListener('mousemove', (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateX = (y - centerY) / 20;
-    const rotateY = (centerX - x) / 20;
-    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
-  });
-  
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-  });
-});
-</script>
+    function initParticles() {
+      const count = window.innerWidth < 768 ? 40 : 80;
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push(new Particle());
+      }
+    }
 
+    function connectParticles() {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(0, 229, 255, ${0.08 * (1 - dist / 120)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => { p.update(); p.draw(); });
+      connectParticles();
+      requestAnimationFrame(animateParticles);
+    }
+
+    window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
+    window.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+
+    resizeCanvas();
+    initParticles();
+    animateParticles();
+
+    // ═══════════════════════════════════════════════
+    // NAVBAR SCROLL EFFECT
+    // ═══════════════════════════════════════════════
+    const navbar = document.getElementById('navbar');
+    const scrollTopBtn = document.getElementById('scrollTop');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      navbar.classList.toggle('scrolled', scrollY > 50);
+      scrollTopBtn.classList.toggle('visible', scrollY > 400);
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ═══════════════════════════════════════════════
+    // MOBILE MENU
+    // ═══════════════════════════════════════════════
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const icon = mobileMenuBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+    });
+
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const icon = mobileMenuBtn.querySelector('i');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-xmark');
+      });
+    });
+
+    // ═══════════════════════════════════════════════
+    // SCROLL ANIMATIONS (Intersection Observer)
+    // ═══════════════════════════════════════════════
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 100);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // ═══════════════════════════════════════════════
+    // COUNTER ANIMATION
+    // ═══════════════════════════════════════════════
+    function animateCounter(element, target, suffix = '', duration = 2000) {
+      const start = 0;
+      const startTime = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(eased * target);
+        element.textContent = current + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(document.getElementById('counter-clients'), 50, '+');
+          animateCounter(document.getElementById('counter-projects'), 100, '+');
+          document.getElementById('counter-efficiency').textContent = '3x';
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const heroStats = document.querySelector('.hero-stats');
+    if (heroStats) statsObserver.observe(heroStats);
+
+    // ═══════════════════════════════════════════════
+    // TYPING EFFECT FOR HERO TITLE
+    // ═══════════════════════════════════════════════
+    const typingPhrases = ['sức mạnh AI', 'Automation', 'AI Chatbot', 'Data thông minh'];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const gradientSpan = document.querySelector('.hero-title .gradient-text');
+
+    function typeEffect() {
+      const currentPhrase = typingPhrases[phraseIndex];
+
+      if (isDeleting) {
+        gradientSpan.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        gradientSpan.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      gradientSpan.classList.add('typing-text');
+
+      let speed = isDeleting ? 40 : 80;
+
+      if (!isDeleting && charIndex === currentPhrase.length) {
+        speed = 2000; // Pause at end
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+        speed = 500;
+      }
+
+      setTimeout(typeEffect, speed);
+    }
+
+    // Start typing effect after page load
+    setTimeout(typeEffect, 2000);
+
+    // ═══════════════════════════════════════════════
+    // SMOOTH SCROLL FOR ANCHOR LINKS
+    // ═══════════════════════════════════════════════
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = 80; // navbar height
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ═══════════════════════════════════════════════
+    // SERVICE CARD TILT EFFECT
+    // ═══════════════════════════════════════════════
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = (y - centerY) / 20;
+        const rotateY = (centerX - x) / 20;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+      });
+    });
+  </script>
+
+  <link rel="stylesheet" href="https://sp.autoworkvn.com/autowork-sp.css">
+  <script>
+    window.AUTOWORK_SP_ID = 'autowork-chat';
+  </script>
+
+  <script src="https://sp.autoworkvn.com/autowork-sp.js"></script>
 </body>
+
 </html>
